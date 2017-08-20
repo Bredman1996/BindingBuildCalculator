@@ -1,0 +1,22 @@
+{
+  "Name": "",
+  "StartingItems": {
+    [
+      "Name" : ""
+    ]
+  },
+  "Stats": [
+
+    {
+      "Damage": "",
+      "Speed" :  "",
+      "ShotSpeed" : "",
+      "Tears" :  "",
+      "Luck" : "",
+      "Health" : "",
+      "Range" : "", 
+      "TearDelay" : ""
+    };
+  ]
+  
+}
