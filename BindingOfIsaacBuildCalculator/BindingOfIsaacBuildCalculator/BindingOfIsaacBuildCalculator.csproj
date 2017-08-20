@@ -105,6 +105,9 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="BindingOfIsaacBuildCalculator_TemporaryKey.pfx" />
+    <None Include="Characters.json" />
+    <None Include="Enemies.json" />
+    <None Include="Items.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />
