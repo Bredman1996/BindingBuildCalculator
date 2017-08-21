@@ -24,7 +24,9 @@ namespace BindingOfIsaacBuildCalculator
     {
         public MainPage()
         {
+            string[] things = new string[] { "", "" };
             this.InitializeComponent();
+            Textblock1.Text = Item.addItem();
         }
     }
 }
