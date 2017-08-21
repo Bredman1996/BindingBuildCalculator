@@ -5,9 +5,10 @@
     xmlns:local="using:BindingOfIsaacBuildCalculator"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Height="2350.465" Width="8168.272">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Name="Textblock1" HorizontalAlignment="Left" Margin="10,129,0,0" TextWrapping="Wrap" Text="Here" VerticalAlignment="Top" Height="625" Width="1260"/>
 
     </Grid>
 </Page>
