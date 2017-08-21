@@ -24,9 +24,13 @@ namespace BindingOfIsaacBuildCalculator
     {
         public MainPage()
         {
-            string[] things = new string[] { "", "" };
             this.InitializeComponent();
-            Textblock1.Text = Item.addItem();
+            String stuff = "";
+            foreach(Item item in Item.getItem())
+            {
+                stuff += "Name is: "+item.name+" Description is:"+item.description+" Type is:"+item.type+"\n";
+            }
+            Textblock1.Text = stuff;
         }
     }
 }

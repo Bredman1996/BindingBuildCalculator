@@ -12,29 +12,41 @@ namespace BindingOfIsaacBuildCalculator
     {
         public string name { get; set; }
         public string description { get; set; }
-        public string effect { get; set; }
+        public string type { get; set; }
         public string[] effectedStats { get; set; }
 
         public Item()
         {
 
         }
-        public Item(string name, string description, string effect, string[] effectedStats)
+        public Item(string name, string description, string type, string[] effectedStats)
         {
             this.name = name;
             this.description = description;
-            this.effect = effect;
+            this.type = type;
             this.effectedStats = effectedStats;
         }
 
-        public static string addItem()
+        public static List<Item> getItem()
         {
-            Item thing = new Item();
-            thing.name = "MyName";
-            thing.effect = "MyEffect";
-            thing.description = "MyDescription";
-            thing.effectedStats = new string[] { "Nope", "Yup"};
-            String output = JsonConvert.SerializeObject(thing);
+            List<Item> items = new List<Item>();
+            string file = "JsonFiles/items.json";
+            using (StreamReader reader = File.OpenText(file))
+            {
+                while (reader.EndOfStream == false)
+                {
+                    string itemString = reader.ReadLine();
+                    Item item = JsonConvert.DeserializeObject<Item>(itemString);
+                    items.Add(item);
+                }
+                reader.Dispose();
+            }
+            return items;
+        }
+
+        public override string ToString()
+        {
+            String output = this.name;
 
             return output;
         }
