@@ -30,7 +30,8 @@ namespace BindingOfIsaacBuildCalculator
         public static List<Item> getItem()
         {
             List<Item> items = new List<Item>();
-            string file = "JsonFiles/items.json";
+            //Directory.SetCurrentDirectory(@"../../../../");
+            string file = @"D:\CodingProjects\Binding\BindingOfIsaacBuildCalculator\BindingOfIsaacBuildCalculator\JsonFiles\items.json";
             using (StreamReader reader = File.OpenText(file))
             {
                 while (reader.EndOfStream == false)

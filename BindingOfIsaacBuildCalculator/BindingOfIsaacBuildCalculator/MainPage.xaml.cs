@@ -24,11 +24,12 @@ namespace BindingOfIsaacBuildCalculator
     {
         public MainPage()
         {
-            this.InitializeComponent();
             String stuff = "";
-            foreach(Item item in Item.getItem())
+            
+            this.InitializeComponent();
+            foreach (Item item in Item.getItem())
             {
-                stuff += "Name is: "+item.name+" Description is:"+item.description+" Type is:"+item.type+"\n";
+                stuff += "Name is: " + item.name + " Description is:" + item.description + " Type is:" + item.type + "\n";
             }
             Textblock1.Text = stuff;
         }
